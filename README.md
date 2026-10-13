@@ -4,7 +4,7 @@
 
 同时打开多个 Abaqus 窗口时，工作目录中可能出现很多时间接近的 `abaqus.rpy`、`abaqus.rpy.1` 等文件。本插件直接向启动它的 Abaqus 会话查询回放文件路径，并显示完整路径和内核 PID，帮助你确认当前操作记录在哪个文件中。
 
-**已验证环境：Windows + Abaqus 2024（CAE / Viewer，Python 3.10）。** 使用 Abaqus 自带的 Python 和 Tk，不需要 `pip`、另外安装 Python 或连接网络服务。其他版本尚未验证；当前版本不支持 Linux。
+**已验证环境：Windows + Abaqus 2023（CAE / Viewer，Python 3.10）。** 使用 Abaqus 自带的 Python 和 Tk，不需要 `pip`、另外安装 Python 或连接网络服务。其他版本尚未验证；当前版本不支持 Linux。
 
 ## 下载
 
