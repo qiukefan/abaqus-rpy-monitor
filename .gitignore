@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+
+# Abaqus working files and user model/results data.
+*.rpy
+*.rpy.*
+*.rec
+*.jnl
+*.cae
+*.odb
+*.lck

@@ -1,0 +1,18 @@
+RPY Monitor v1.0.0 实机验证，2026-10-12
+
+环境：Windows，Abaqus/CAE 2024、Abaqus/Viewer 2024，Abaqus Python 3.10.5，Tk 8.6.12。
+
+1. 当前已有 CAE 内核 PID 45884，API 返回 abaqus.rpy.41。
+   getStartupDir() 与日志目录一致；临时改变工作目录后仍能正确解析同一文件。
+   监控窗口实际打开，显示已有 ODB 操作命令。
+2. 在专用测试目录启动空白 Viewer 内核 PID 8184。
+   安装后的 Plug-ins > RPY Monitor > Open Current Session 菜单可用。
+   监控窗口绑定测试 Viewer 的 abaqus.rpy，没有串到原 CAE 的 abaqus.rpy.41。
+3. 在测试 Viewer 命令行执行 print('RPY_MONITOR_LIVE_TEST_20261012')。
+   原回放文件出现对应 cliCommand 语句，浮窗自动出现该语句和输出注释。
+   原 CAE 回放文件没有出现该测试语句。
+4. 使用 Abaqus 自带 Python 运行 unittest：32 项全部通过。
+   11 项内核路径/启动测试，16 项日志读取测试，5 项真实 Tk 窗口集成测试。
+5. 另行验证窗口上限、进程提前退出、暂停时内核退出后的最终命令补读。
+
+限制：未验证其他 Abaqus 版本及 Linux；实时性取决于 Abaqus 将命令写入磁盘的时机。
